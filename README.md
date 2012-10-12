@@ -20,6 +20,12 @@ Or install it yourself as:
 
 Please refer to [orm_adapter](https://github.com/ianwhite/orm_adapter)'s README
 
+## Run Tests
+
+You need CouchDB running at localhost to run the tests
+
+Default test db is http://locahost:5984/orm_adapter_spec without admin
+
 ## Contributing
 
 1. Fork it
