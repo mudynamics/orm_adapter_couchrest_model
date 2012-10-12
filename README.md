@@ -1,6 +1,6 @@
-# OrmAdapterCouchrestModel
+# ORM Adapter for couchrest_model
 
-TODO: Write a gem description
+Add couchrest_model support to [orm_adapter](https://github.com/ianwhite/orm_adapter)
 
 ## Installation
 
@@ -18,12 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Please refer to [orm_adapter](https://github.com/ianwhite/orm_adapter)'s README
 
 ## Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+4. add test to verify it
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create new Pull Request
