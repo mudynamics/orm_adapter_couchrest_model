@@ -99,11 +99,12 @@ shared_examples_for "example app with orm_adapter" do
         #  user_adapter.find_first.should == user
         #end
 
-        pending "when conditions contain associated object, should return first model if it exists" do
-          user = create_model(user_class)
-          note = create_model(note_class, :owner => user)
-          note_adapter.find_first(:owner => user).should == note
-        end
+        # associations are not supported
+        #it "when conditions contain associated object, should return first model if it exists" do
+        #  user = create_model(user_class)
+        #  note = create_model(note_class, :owner => user)
+        #  note_adapter.find_first(:owner => user).should == note
+        #end
 
         it "understands :id as a primary key condition (allowing scoped finding)" do
           create_model(user_class, :name => "Fred")
@@ -165,12 +166,13 @@ shared_examples_for "example app with orm_adapter" do
           user_adapter.find_all(:name => "Fred").should == []
         end
 
-        pending "when conditions contain associated object, should return first model if it exists" do
-          user1, user2 = create_model(user_class), create_model(user_class)
-          note1 = create_model(note_class, :owner => user1)
-          note2 = create_model(note_class, :owner => user2)
-          note_adapter.find_all(:owner => user2).should == [note2]
-        end
+        # associations are not supported
+        #it "when conditions contain associated object, should return first model if it exists" do
+        #  user1, user2 = create_model(user_class), create_model(user_class)
+        #  note1 = create_model(note_class, :owner => user1)
+        #  note2 = create_model(note_class, :owner => user2)
+        #  note_adapter.find_all(:owner => user2).should == [note2]
+        #end
       end
 
       describe "(:order => <order array>)" do
@@ -234,17 +236,19 @@ shared_examples_for "example app with orm_adapter" do
       #  lambda { user_adapter.create!(:user => create_model(note_class)) }.should raise_error
       #end
 
-      pending "when attributes contain an associated object, should create a model with the attributes" do
-        user = create_model(user_class)
-        note = note_adapter.create!(:owner => user)
-        reload_model(note).owner.should == user
-      end
+      # associations are not supported
+      #it "when attributes contain an associated object, should create a model with the attributes" do
+      #  user = create_model(user_class)
+      #  note = note_adapter.create!(:owner => user)
+      #  reload_model(note).owner.should == user
+      #end
 
-      pending "when attributes contain an has_many assoc, should create a model with the attributes" do
-        notes = [create_model(note_class), create_model(note_class)]
-        user = user_adapter.create!(:notes => notes)
-        reload_model(user).notes.should == notes
-      end
+      # associations are not supported
+      #it "when attributes contain an has_many assoc, should create a model with the attributes" do
+      #  notes = [create_model(note_class), create_model(note_class)]
+      #  user = user_adapter.create!(:notes => notes)
+      #  reload_model(user).notes.should == notes
+      #end
     end
 
     describe "#destroy(instance)" do
