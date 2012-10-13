@@ -15,9 +15,11 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency 'activemodel', '>= 3.0.0'
-  gem.add_dependency 'orm_adapter'
-  gem.add_dependency 'couchrest_model', '2.0.0.beta2'
+  gem.rubyforge_project = "orm_adapter_couchrest_model"
+
+  gem.add_dependency "activemodel", ">= 3.0.0"
+  gem.add_dependency "orm_adapter"
+  gem.add_dependency "couchrest_model", "2.0.0.beta2"
 
   gem.add_development_dependency "bundler", ">= 1.0.0"
   gem.add_development_dependency "rake", ">= 0.8.7"
