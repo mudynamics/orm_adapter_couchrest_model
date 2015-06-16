@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "activemodel", ">= 3.0.0"
   gem.add_dependency "orm_adapter"
-  gem.add_dependency "couchrest_model", "2.0.0.beta2"
+  gem.add_dependency "couchrest_model", ">= 2.0.0"
 
   gem.add_development_dependency "bundler", ">= 1.0.0"
   gem.add_development_dependency "rake", ">= 0.8.7"
